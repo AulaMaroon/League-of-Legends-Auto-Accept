@@ -18,6 +18,7 @@ This is a simple league of legends queue accepter script
 
 # Additional
 
-- You can cancel queue wait by pressing esc (will be shown on screen)
+- You can cancel queue wait by pressing esc #Might need to press twice to cancel (will be shown on screen)
 - You can re-queue by pressing space (will be shown on screen)
 - To exit script you can double press ESC
+
