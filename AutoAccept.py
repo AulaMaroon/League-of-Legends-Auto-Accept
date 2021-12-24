@@ -1,8 +1,15 @@
 import pyautogui
 import keyboard
-import os
+import os, ctypes
 
+try:
+ is_admin = os.getuid() == 0
+except AttributeError:
+ is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
 
+if(is_admin == False):
+    print('Please Run Script as Administrator')
+    exit()
 
 def find():
     os.system('cls')
