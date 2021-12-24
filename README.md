@@ -11,8 +11,8 @@ This is a simple league of legends queue accepter script
 # How to use 
 
 1. Install python
-2. Install requirements using pip install -r requirements.txt
-3. Clone the repo or download zip
+2. Clone the repo or download zip
+3. Install requirements using pip install -r requirements.txt
 4. Select gamemode and confirm
 5. Run the script with admin rights (else it wont click) then type python AutoAccept.py
 6. Script will wait for the accept button to appear
