@@ -4,9 +4,9 @@ This is a simple league of legends queue accepter script
 
 # Requirements
 
-python
-PyAutoGUI
-keyboard
+- python
+- PyAutoGUI
+- keyboard
 
 # How to use 
 
