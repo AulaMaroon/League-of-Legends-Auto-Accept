@@ -1,6 +1,7 @@
 import pyautogui
 import keyboard
 import os, ctypes
+import time
 
 try:
  is_admin = os.getuid() == 0
@@ -13,6 +14,7 @@ if(is_admin == False):
 
 def find():
     os.system('cls')
+    checker()
     f = pyautogui.locateOnScreen('./image/find.png', confidence = 0.8)
     pyautogui.moveTo(f)
     pyautogui.doubleClick()
@@ -41,17 +43,39 @@ def cancel():
     wait()
 
 def wait():
-    print('Press Space To Queue')
-    print()
-    print('Press ESC To Close Program')
+    logo()
+    print('- Press Enter To Start Queue')
+    print('- Press ESC To Close Program')
     wait = 0
     while(wait == 0):
-        if keyboard.is_pressed('space'):
+        if keyboard.is_pressed('enter'):
             os.system('cls')
             find()
         if keyboard.is_pressed('esc'):
             os.system('cls')
             exit()
 
-find()
-accept()
+def logo():
+    os.system('cls')
+    print("""                _       __  __                             
+     /\        | |     |  \/  |                            
+    /  \  _   _| | __ _| \  / | __ _ _ __ ___   ___  _ __  
+   / /\ \| | | | |/ _` | |\/| |/ _` | '__/ _ \ / _ \| '_ \ 
+  / ____ \ |_| | | (_| | |  | | (_| | | | (_) | (_) | | | |
+ /_/    \_\__,_|_|\__,_|_|  |_|\__,_|_|  \___/ \___/|_| |_|
+                                                           
+                                                           """ )
+    #print("-----------------------------------------------------------")
+    return()
+
+def checker():
+    cm = pyautogui.locateOnScreen('./image/change mode.png', confidence=0.9)
+    pt = pyautogui.locateOnScreen('./image/party.png', confidence=0.8)
+    if (cm == None):
+        pyautogui.moveTo(pt)
+        pyautogui.doubleClick()
+    time.sleep(1.5)     
+    return()
+
+
+wait()
