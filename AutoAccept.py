@@ -74,8 +74,7 @@ def checker():
     if (cm == None):
         pyautogui.moveTo(pt)
         pyautogui.doubleClick()
-    time.sleep(1.5)     
+    time.sleep(1.5) 
     return()
-
 
 wait()
