@@ -15,9 +15,12 @@ if(is_admin == False):
 def find():
     os.system('cls')
     checker()
+    iq = pyautogui.locateOnScreen('./image/inq.png', confidence = 0.8)
+    if iq != None:
+        accept()
     f = pyautogui.locateOnScreen('./image/find.png', confidence = 0.8)
     pyautogui.moveTo(f)
-    pyautogui.doubleClick()
+    pyautogui.click()
     accept()
 
 def accept():
@@ -29,10 +32,11 @@ def accept():
         a = pyautogui.locateOnScreen('./image/accept.png', grayscale = True, confidence = 0.8)
         if keyboard.is_pressed('esc'):
             cancel()
-    pyautogui.moveTo(a)
-    pyautogui.doubleClick()
-    os.system('cls')
-    exit()
+        pyautogui.moveTo(a)
+        pyautogui.doubleClick()
+        b = pyautogui.locateOnScreen('./image/edit.png', confidence = 0.8)
+        if (b != None):
+            exit()
     
 def cancel():
     c = pyautogui.locateOnScreen('./image/cancel.png', confidence = 0.9)
@@ -69,12 +73,13 @@ def logo():
     return()
 
 def checker():
-    cm = pyautogui.locateOnScreen('./image/change mode.png', confidence=0.9)
+    cm = pyautogui.locateOnScreen('./image/cmi.png', confidence=0.8)
     pt = pyautogui.locateOnScreen('./image/party.png', confidence=0.8)
-    if (cm == None):
-        pyautogui.moveTo(pt)
-        pyautogui.doubleClick()
-    time.sleep(1.5) 
+    if (pt != None):
+        if (cm == None):
+            pyautogui.moveTo(pt)
+            pyautogui.doubleClick()
+            time.sleep(1.5) 
     return()
 
 wait()
