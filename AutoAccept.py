@@ -19,8 +19,7 @@ def find():
     if iq != None:
         accept()
     f = pyautogui.locateOnScreen('./image/find.png', confidence = 0.8)
-    pyautogui.moveTo(f)
-    pyautogui.click()
+    pyautogui.doubleClick(f)
     accept()
 
 def accept():
@@ -30,19 +29,17 @@ def accept():
     print ('Press Escape To Cancel Queue')
     while(a == None):
         a = pyautogui.locateOnScreen('./image/accept.png', grayscale = True, confidence = 0.8)
+        if (a != None): 
+            pyautogui.doubleClick(a)
         if keyboard.is_pressed('esc'):
             cancel()
-        pyautogui.moveTo(a)
-        pyautogui.doubleClick()
         b = pyautogui.locateOnScreen('./image/edit.png', confidence = 0.8)
         if (b != None):
             exit()
     
 def cancel():
     c = pyautogui.locateOnScreen('./image/cancel.png', confidence = 0.9)
-    pyautogui.moveTo(c)
-    pyautogui.click()
-    print('Queue Has Been Canceled')
+    pyautogui.doubleClick(c)
     os.system('cls')
     wait()
 
@@ -77,8 +74,7 @@ def checker():
     pt = pyautogui.locateOnScreen('./image/party.png', confidence=0.8)
     if (pt != None):
         if (cm == None):
-            pyautogui.moveTo(pt)
-            pyautogui.doubleClick()
+            pyautogui.doubleClick(pt)
             time.sleep(1.5) 
     return()
 
