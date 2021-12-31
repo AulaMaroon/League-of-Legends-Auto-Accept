@@ -33,7 +33,7 @@ def accept():
             pyautogui.doubleClick(a)
         if keyboard.is_pressed('esc'):
             cancel()
-        b = pyautogui.locateOnScreen('./image/edit.png', confidence = 0.8)
+        b = pyautogui.locateOnScreen('./image/emote.png', confidence = 0.9)
         if (b != None):
             exit()
     
@@ -68,6 +68,7 @@ def logo():
                                                            """ )
     #print("-----------------------------------------------------------")
     return()
+
 
 def checker():
     cm = pyautogui.locateOnScreen('./image/cmi.png', confidence=0.8)
