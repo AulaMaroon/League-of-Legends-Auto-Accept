@@ -18,7 +18,7 @@ def find():
     iq = pyautogui.locateOnScreen('./image/inq.png', confidence = 0.8)
     if iq != None:
         accept()
-    f = pyautogui.locateOnScreen('./image/find.png', confidence = 0.8)
+    f = pyautogui.locateOnScreen('./image/fbutton.png', confidence = 0.8)
     pyautogui.doubleClick(f)
     accept()
 
