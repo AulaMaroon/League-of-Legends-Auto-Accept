@@ -9,6 +9,7 @@ This is a simple league of legends queue accepter script
 - keyboard
 - PyGetWindow 
 - numpy
+# Requirements
 (Old Version)
 - python
 - PyAutoGUI
