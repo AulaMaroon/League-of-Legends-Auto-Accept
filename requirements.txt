@@ -1,2 +1,4 @@
 PyAutoGUI == 0.9.53
+PyGetWindow == 0.0.9
 keyboard == 0.13.5
+numpy == 1.21.5
