@@ -3,7 +3,14 @@
 This is a simple league of legends queue accepter script
 
 # Requirements
-
+(New Version)
+- python
+- PyAutoGUI
+- keyboard
+- PyGetWindow 
+- numpy
+# Requirements
+(Old Version)
 - python
 - PyAutoGUI
 - keyboard
