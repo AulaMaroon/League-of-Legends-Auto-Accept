@@ -37,6 +37,8 @@ def find():
     if find_button != None:
         pyautogui.click(find_button)
         accept()
+    else:
+        accept()
 
 def cancel():
     game_window_loc()
