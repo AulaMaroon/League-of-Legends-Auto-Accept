@@ -1,4 +1,4 @@
-# League of Legends Auto Accept - AulaMaroon
+# League of Legends Auto Accept - AulaMaroon (Pixel Based)
 
 This is a simple league of legends queue accepter script
 
